@@ -1,0 +1,109 @@
+.navbar{
+    height: 100vh;
+    width: 15%;
+    min-width: 200px;
+    background: #053e4c;
+}
+
+@media screen and (max-width: 667px) {
+    .navbar {
+        width: 100%;
+        height: 46px;
+    }
+}
+
+@media screen and (max-width: 667px) {
+    .navbar-responsive {
+        width: 100%;
+        height: 199px;
+        background: #053e4c;
+    }
+
+    .navbar-responsive ul a{
+        text-decoration: none;
+        color: #fff;
+        width: 100%;
+        text-align: center;
+    }
+}
+
+@media screen and (min-width: 667px) {
+    .navbar-responsive {
+        height: 100vh;
+        width: 15%;
+        min-width: 200px;
+        background: #053e4c;
+    }
+
+    .navbar-responsive ul a{
+        text-decoration: none;
+        color: #fff;
+        width: 100%;
+        text-align: center;
+    }
+}
+
+
+.lista {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+}
+
+
+.navbar ul li{
+    cursor: pointer;
+}
+
+.navbar ul li:hover{
+    background: red;
+}
+
+.selected{
+    background: red;
+}
+
+.navbar ul a{
+    text-decoration: none;
+    color: #fff;
+    width: 100%;
+    text-align: center;
+}
+
+.navlink{
+    display: flex;
+    justify-content:space-between;
+    padding: 1rem;
+}
+
+.navlink p{
+    margin: 0;
+}
+
+.responsive-button{
+    background: transparent;
+    border: none;
+    margin-left: 1rem;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 667px) {
+    .responsive-button i{
+        color: white;
+    }
+}
+
+
+@media screen and (min-width: 667px) {
+    .responsive-button {
+        display: none;
+    }
+}
+
+
+
+
