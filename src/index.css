@@ -75,6 +75,19 @@
     }
 }
 
+@media screen and (max-width: 480px) {
+    .button-submit{
+        height: 2rem;
+        width: 300px;
+    }
+    .search-country{
+        margin-bottom: 1rem;
+        width: 300px;
+        height: 2rem;
+    }
+
+}
+
 .icon{
     margin-right: 10px;
     margin-top: 3px;
