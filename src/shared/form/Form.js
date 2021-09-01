@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react'
 import { useForm } from '../../hooks/useForm';
+import './form.css'
 
 export const Form = ({ setSearchCountry}) => {
 
