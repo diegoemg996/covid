@@ -14,7 +14,6 @@ export const AppRouter = () => {
         <Router>
         <div className="router-container">
           <Navbar/>
-
           <Switch>
             <Route exact path="/historical">
               <Historical />

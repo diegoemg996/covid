@@ -25,8 +25,8 @@ export const Navbar = () => {
             <i className="fas fa-bars fa-2x"></i>
           </button>
           <ul className={'lista'}>
-            <li onClick={()=> handleRouting('historical')}>
-              <NavLink exact className="navlink" to="/historical" activeClassName="selected">
+            <li onClick={()=> handleRouting('')}>
+              <NavLink exact className="navlink" to="/" activeClassName="selected">
                 <p>Casos Historicos</p>
               </NavLink>
             </li>
