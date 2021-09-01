@@ -1,7 +1,7 @@
 import { types } from "../types/types";
 
 const initialState = {
-    datosBusqueda: {},
+    dataCountry: {},
     dataVaccines: {},
     error: undefined,
     errorVaccines: undefined
@@ -13,13 +13,13 @@ export const searchReducer = (state= initialState, action) =>{
         case types.historicalSearch:
             return{
                 ...state,
-                datosBusqueda: action.payload.datosBusqueda,
+                dataCountry: action.payload.dataCountry,
                 error: false
             }
         case types.error:
             return{
                 ...state,
-                datosBusqueda: {},
+                dataCountry: {},
                 error: true
             }
         case types.vaccinesSearch:{
