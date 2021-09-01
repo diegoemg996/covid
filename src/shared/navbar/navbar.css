@@ -15,7 +15,7 @@
 @media screen and (max-width: 667px) {
     .navbar-responsive {
         width: 100%;
-        height: 199px;
+        height: 200px;
         background: #053e4c;
     }
 
@@ -75,11 +75,12 @@
 .navlink{
     display: flex;
     justify-content:space-between;
-    padding: 1rem;
+    padding: 1rem 0 1rem 0rem;
 }
 
 .navlink p{
     margin: 0;
+    margin-left: 0.5rem;
 }
 
 .responsive-button{
@@ -88,7 +89,6 @@
     margin-left: 1rem;
     margin-top: 10px;
     margin-bottom: 10px;
-    cursor: pointer;
 }
 
 @media screen and (max-width: 667px) {
@@ -103,7 +103,3 @@
         display: none;
     }
 }
-
-
-
-

@@ -1,24 +1,29 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { useForm } from '../../hooks/useForm';
 
-export const Form = () => {
+export const Form = ({ setSearchCountry}) => {
 
     const [values, handleInputChange] = useForm({
-        busqueda: ''
+        search: ''
     })
 
-    const {busqueda} = values;
+    const {search} = values;
+
+    useEffect(() => {
+        setSearchCountry(search)
+    }, [search])
 
 
     return (
         <div>
             <input
+                className="search-country"
                 autoComplete="off"
-                name="busqueda"
-                value={busqueda}
+                placeholder="Ingrese país a buscar"
+                name="search"
+                value={search}
                 onChange={handleInputChange}
             ></input>
-            <p>{busqueda}</p>
         </div>
     )
 }
