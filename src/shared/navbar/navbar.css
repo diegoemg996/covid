@@ -15,7 +15,7 @@
 @media screen and (max-width: 667px) {
     .navbar-responsive {
         width: 100%;
-        height: 200px;
+        height: 148px;
         background: #053e4c;
     }
 
@@ -94,6 +94,7 @@
 @media screen and (max-width: 667px) {
     .responsive-button i{
         color: white;
+        cursor: pointer;
     }
 }
 

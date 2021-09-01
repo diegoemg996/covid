@@ -2,22 +2,41 @@ import { types } from "../types/types";
 
 const initialState = {
     datosBusqueda: {},
-    error: false
+    dataVaccines: {},
+    error: undefined,
+    errorVaccines: undefined
 }
 
 
 export const searchReducer = (state= initialState, action) =>{
     switch (action.type) {
-        case types.liveSearch:
+        case types.historicalSearch:
             return{
                 ...state,
-                datosBusqueda: action.payload.datosBusqueda
+                datosBusqueda: action.payload.datosBusqueda,
+                error: false
             }
         case types.error:
             return{
                 ...state,
-                error: action.payload.error
+                datosBusqueda: {},
+                error: true
             }
+        case types.vaccinesSearch:{
+            return{
+                ...state,
+                dataVaccines: action.payload.dataVaccines,
+                errorVaccines: false
+            }
+        }
+        case types.errorVaccines:{
+            return{
+                ...state,
+                dataVaccines:{},
+                errorVaccines: true
+            }
+        }
+
     
         default:
             return state;

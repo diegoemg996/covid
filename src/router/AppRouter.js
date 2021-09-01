@@ -5,7 +5,6 @@ import {
     Route
   } from "react-router-dom";
 import { Historical } from '../pages/historical/Historical';
-import { LiveCases } from '../pages/live/LiveCases';
 import { Vaccines } from '../pages/vaccines/Vaccines';
 import { Navbar } from '../shared/navbar/Navbar';
 import './router.css';
@@ -16,9 +15,6 @@ export const AppRouter = () => {
         <div className="router-container">
           <Navbar/>
           <Switch>
-            <Route exact path="/live">
-              <LiveCases />
-            </Route>
             <Route exact path="/historical">
               <Historical />
             </Route>
@@ -26,7 +22,7 @@ export const AppRouter = () => {
               <Vaccines />
             </Route>
             <Route path="/">
-              <LiveCases />
+              <Historical />
             </Route>
           </Switch>
         </div>

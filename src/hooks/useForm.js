@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-
+//Custom hook que permite manejar el estado de los formularios
 export const useForm = (initialState = {}) => {
 
     const [values, setValues] = useState(initialState);

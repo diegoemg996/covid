@@ -1,6 +1,7 @@
 export const types = {
-
+    historicalSearch: '[Search] historical',
     liveSearch: '[Search] live',
-    vaccines: '[Search] vaccines',
+    vaccinesSearch: '[Search] vaccines',
+    errorVaccines: '[Search] error vaccines',
     error: '[Search] error'
 }

@@ -1,34 +1,77 @@
 import apiCovid from "../api/apiCovid"
 import { types } from "../types/types"
 
-export const getLiveData = (country)=>{
+export const getHistoricalData = (country)=>{
+
+    //Se hace llamado a la api
+
     return(dispatch)=>{
         apiCovid.get(`/cases?country=${country}`)
             .then(res => {
                 if(res.data.hasOwnProperty('All')){
-                    dispatch(search(res.data.All))
-                    dispatch(setError(false))
+                    //Se guarda el país
+                    dispatch(searchCountry(res.data.All))
+
                 }else{
-                    dispatch(setError(true))
+                    //Si no se encuentra el país se asigna error en true
+                    dispatch(setError())
                 }
             })
     }
 }
 
-export const search = (data) => {
+export const getVaccinesData = (country)=>{
+
+    //Se hace llamado a la api
+    console.log(country);
+
+    return(dispatch)=>{
+        apiCovid.get(`/vaccines?country=${country}`)
+            .then(res => {
+                if(res.data.hasOwnProperty('All')){
+                    //Se guarda el país
+                    dispatch(searchCountryVaccine(res.data.All))
+
+                }else{
+                    //Si no se encuentra el país se asigna error en true
+                    dispatch(setErrorVaccines())
+                }
+            })
+    }
+}
+
+export const searchCountry = (data) => {
     return{
-        type: types.liveSearch,
+        type: types.historicalSearch,
         payload: {
             datosBusqueda: data
         }
     }
 }
 
-export const setError = (err) => {
+export const searchCountryVaccine = (data) => {
+    return{
+        type: types.vaccinesSearch,
+        payload: {
+            dataVaccines: data
+        }
+    }
+}
+
+export const setError = () => {
     return{
         type: types.error,
         payload: {
-            error: err
+            error: true
+        }
+    }
+}
+
+export const setErrorVaccines = () => {
+    return{
+        type: types.errorVaccines,
+        payload: {
+            errorVaccines: true
         }
     }
 }

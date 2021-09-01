@@ -11,7 +11,7 @@ export const Form = ({ setSearchCountry}) => {
 
     useEffect(() => {
         setSearchCountry(search)
-    }, [search])
+    }, [search, setSearchCountry])
 
 
     return (
@@ -19,7 +19,7 @@ export const Form = ({ setSearchCountry}) => {
             <input
                 className="search-country"
                 autoComplete="off"
-                placeholder="Ingrese país a buscar"
+                placeholder="Ingrese país a buscar (En inglés)"
                 name="search"
                 value={search}
                 onChange={handleInputChange}
