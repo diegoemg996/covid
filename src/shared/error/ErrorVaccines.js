@@ -2,7 +2,7 @@ import React from 'react'
 import { useSelector } from 'react-redux';
 import './error.css'
 
-export const Error = () => {
+export const ErrorVaccines = () => {
 
     const state = useSelector(state => state.search);
 
@@ -10,7 +10,7 @@ export const Error = () => {
         <div className="error-message">
 
             {
-                (state.error === undefined)
+                (state.errorVaccines === undefined)
                     ?
                 null
                     :

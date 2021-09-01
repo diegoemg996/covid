@@ -3,8 +3,8 @@ import { useDispatch, useSelector } from 'react-redux'
 import {  getVaccinesData} from '../../actions/Search';
 import { upperCase } from '../../helpers/upperCase';
 import { Form } from '../../shared/form/Form'
-import { Error } from '../../shared/error/Error'
 import { CardVaccines } from '../../shared/card/CardVaccines';
+import { ErrorVaccines } from '../../shared/error/ErrorVaccines';
 
 export const Vaccines = () => {
 
@@ -38,7 +38,7 @@ export const Vaccines = () => {
                 {
                     (state.errorVaccines || state.errorVaccines === undefined)  
                         ? 
-                    <Error></Error> 
+                    <ErrorVaccines></ErrorVaccines> 
                         : 
                     <CardVaccines></CardVaccines>
                 }

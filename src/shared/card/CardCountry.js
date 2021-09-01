@@ -7,7 +7,7 @@ export const CardCountry = () => {
 
     const state = useSelector(state => state.search);
 
-    const {country, confirmed, deaths, abbreviation} = state.dataCountry;
+    const {country, confirmed, deaths, abbreviation} = state.datosBusqueda;
     
     return (
 

@@ -44,7 +44,7 @@ export const searchCountry = (data) => {
     return{
         type: types.historicalSearch,
         payload: {
-            dataCountry: data
+            datosBusqueda: data
         }
     }
 }
