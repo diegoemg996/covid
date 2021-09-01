@@ -16,9 +16,6 @@
         flex: 1 1 0;
     }
 
-    .content-container{
-        margin: 2rem;
-    }
     
 }
 
@@ -71,6 +68,10 @@
         margin-bottom: 1rem;
         width: 365.4px;
         height: 2rem;
+    }
+
+    .content-container{
+        margin: 2rem;
     }
 }
 
